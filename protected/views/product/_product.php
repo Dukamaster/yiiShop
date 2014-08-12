@@ -1,0 +1,1 @@
+<div><?php echo CHtml::encode($data->product_name); ?></div>
