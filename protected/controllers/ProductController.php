@@ -6,15 +6,18 @@ class ProductController extends Controller
 	{
 		$model = new Product('search');
 		$model->unsetAttributes(); 
-		// if($_POST) {
-      // $search_value = $_POST['search_value'];
-      // $Criteria = new CDbCriteria(array('condition' => "product_name like '%$search_value%'"));
-      // $products = Product::model()->findAll($Criteria);
-      // $this->getController()->render('result',array('products'=>$products));           
-		 // clear any default values
-		if(isset($_POST['Product']))
-		$model->attributes = $_POST['Product'];
-  	// }
+		if(isset($_POST['Product'])) {
+			$model->attributes = $_POST['Product'];
+			if ($model->category_id == 1) {
+				unset($model->category_id);
+			}
+		}
+		if(isset($_GET['cat'])) {
+			$model->category_id = $_GET['cat'];
+			if ($model->category_id == 1) {
+				unset($model->category_id);
+			}
+		}
 		$this->render('search', array('model' => $model));
 	}
 

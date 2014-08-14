@@ -109,4 +109,26 @@ class Category extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/*
+	 * Scope 
+	*/
+	public function scopes() {
+		return array(
+			'parent'=>array(
+				'condition'=>'parent = 0',
+			),
+			'child'=>array(
+			),
+		);
+	}
+
+	public function child($parent)
+	{
+    $this->getDbCriteria()->mergeWith(array(
+      'condition'=>"parent = $parent",
+    ));
+    return $this;
+	}
+	
 }
