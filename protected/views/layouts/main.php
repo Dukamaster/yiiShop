@@ -89,26 +89,7 @@
 		<div class="well well-small"><a id="myCart" href="product_summary.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/ico-cart.png" alt="cart">3 Items in your cart  <span class="badge badge-warning pull-right">$155.00</span></a></div>
 		<?php $this->widget('LeftmenuWidget'); ?>
 		<br/>
-		  <div class="thumbnail">
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera"/>
-			<div class="caption">
-			  <h5>Panasonic</h5>
-				<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
-			</div>
-		  </div><br/>
-			<div class="thumbnail">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
-				<div class="caption">
-				  <h5>Kindle</h5>
-				    <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
-				</div>
-			  </div><br/>
-			<div class="thumbnail">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/payment_methods.png" title="Bootshop Payment Methods" alt="Payments Methods">
-				<div class="caption">
-				  <h5>Payment Methods</h5>
-				</div>
-			  </div>
+		<?php $this->widget('LeftProductWidget'); ?>
 	</div>
 <!-- Sidebar end=============================================== -->
 		<?php echo $content; ?>
@@ -116,47 +97,11 @@
 	</div>
 </div>
 <!-- Footer ================================================================== -->
-	<div  id="footerSection">
-	<div class="container">
-		<div class="row">
-			<div class="span3">
-				<h5>ACCOUNT</h5>
-				<a href="login.html">YOUR ACCOUNT</a>
-				<a href="login.html">PERSONAL INFORMATION</a> 
-				<a href="login.html">ADDRESSES</a> 
-				<a href="login.html">DISCOUNT</a>  
-				<a href="login.html">ORDER HISTORY</a>
-			 </div>
-			<div class="span3">
-				<h5>INFORMATION</h5>
-				<a href="contact.html">CONTACT</a>  
-				<a href="register.html">REGISTRATION</a>  
-				<a href="legal_notice.html">LEGAL NOTICE</a>  
-				<a href="tac.html">TERMS AND CONDITIONS</a> 
-				<a href="faq.html">FAQ</a>
-			 </div>
-			<div class="span3">
-				<h5>OUR OFFERS</h5>
-				<a href="#">NEW PRODUCTS</a> 
-				<a href="#">TOP SELLERS</a>  
-				<a href="special_offer.html">SPECIAL OFFERS</a>  
-				<a href="#">MANUFACTURERS</a> 
-				<a href="#">SUPPLIERS</a> 
-			 </div>
-			<div id="socialMedia" class="span3 pull-right">
-				<h5>SOCIAL MEDIA </h5>
-				<a href="#"><img width="60" height="60" src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/facebook.png" title="facebook" alt="facebook"/></a>
-				<a href="#"><img width="60" height="60" src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/twitter.png" title="twitter" alt="twitter"/></a>
-				<a href="#"><img width="60" height="60" src="<?php echo Yii::app()->request->baseUrl; ?>/public/images/youtube.png" title="youtube" alt="youtube"/></a>
-			 </div> 
-		 </div>
-		<p class="pull-right">&copy; Bootshop</p>
-	</div><!-- Container End -->
-	</div>
+<?php $this->widget('FooterWidget'); ?>
 <!-- Placed at the end of the document so the pages load faster ============================================= -->
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/jquery.js" type="text/javascript"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/google-code-prettify/prettify.js"></script>
-	
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/bootshop.js"></script>
-  <script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/jquery.lightbox-0.5.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/jquery.js" type="text/javascript"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/google-code-prettify/prettify.js"></script>
+
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/bootshop.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/public/js/jquery.lightbox-0.5.js"></script>

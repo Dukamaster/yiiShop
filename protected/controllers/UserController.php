@@ -11,7 +11,7 @@ class UserController extends Controller {
 				$this->redirect(Yii::app()->homeUrl);
 			}
 			else if($errors !== '[]') {
-				echo 'invalid_username_password';
+				echo 'Invalid Username or Password';
 			}				
 		}
 		$this->renderPartial('login', array('model'=>$model));
@@ -47,5 +47,23 @@ class UserController extends Controller {
 	public function actionLogout() {
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	public function actionForget() {
+		if (isset($_POST['inputEmail'])) {
+			$record = User::model()->findByAttributes(array("email"=>$_REQUEST['inputEmail']));	
+			if ($record) {
+				Yii::app()->user->setFlash('success', "Further instructions have been sent to your e-mail address.");
+				$this->passwordRecover();
+			}
+			else {
+				Yii::app()->user->setFlash('error', "Email address is not existed");	
+			}	
+		}
+		$this->render('forget');
+	}
+
+	public function passwordRecover() {
+
 	}
 }

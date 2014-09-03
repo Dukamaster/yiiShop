@@ -135,4 +135,17 @@ class Product extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function scopes()
+  {
+    return array(
+      'published'=>array(
+      	'condition'=>'stock_amount > 1',
+      	'condition'=>'product_state = 1',
+    ),
+    'recently'=>array(
+        'limit'=>3,
+      ),
+    );
+  }
 }

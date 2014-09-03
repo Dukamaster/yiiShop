@@ -14,8 +14,8 @@
 	<h3> Registration</h3>	
 	<div class="well">
 	
-	<!-- <div class="alert alert-info fade in"> -->
-		<!-- <button type="button" class="close" data-dismiss="alert">×</button>
+	<div class="alert alert-info fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
 		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 	 </div>
 	<div class="alert fade in">
@@ -25,7 +25,7 @@
 	 <div class="alert alert-block alert-error fade in">
 		<button type="button" class="close" data-dismiss="alert">×</button>
 		<strong>Lorem Ipsum is simply</strong> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>  -->
+	 </div> 
 	<!-- <form class="form-horizontal" > -->
 	<?php $form=$this->beginWidget('CActiveForm', array(
 		'id'=>'regisForm',

@@ -1,8 +1,5 @@
 <?php 
-
 class LoginWidget extends CWidget {
-
-	
 	public function init(){
 	}
 	public function getData(){
@@ -12,5 +9,3 @@ class LoginWidget extends CWidget {
 		$this->render('loginWidget');
 	}
 }
-
-?>
