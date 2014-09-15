@@ -15,6 +15,7 @@ return array(
         'application.components.*',
         'application.helpers.*',
         'application.widgets.*',
+        'application.extensions.shoppingCart.*'
       
     ),
     'modules' => array(
@@ -34,6 +35,9 @@ return array(
         'user' => array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
+        ),
+        'shoppingCart' => array(
+            'class' => 'application.extensions.shoppingCart.EShoppingCart',
         ),
         // uncomment the following to enable URLs in path-format
         /*
