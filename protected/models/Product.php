@@ -21,7 +21,7 @@
  * @property integer $like
  * @property integer $dislike
  */
-class Product extends CActiveRecord
+class Product extends CActiveRecord implements IECartPosition
 {
 	/**
 	 * @return string the associated database table name
@@ -147,5 +147,13 @@ class Product extends CActiveRecord
         'limit'=>3,
       ),
     );
+  }
+
+  function getId(){
+      return 'Book'.$this->product_id;
+  }
+
+  function getPrice(){
+      return $this->price;
   }
 }
